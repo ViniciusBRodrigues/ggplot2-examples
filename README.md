@@ -28,4 +28,4 @@ Some graphics examples for ggplot2 using GLM.
 ![plot](https://s10.postimg.org/y56gh5crd/Rplot.png)
 
 ### For poisson data
-ggplot(data, aes(x = varX1, y = varY, color = factor(varX2))) + geom_point() + geom_smooth(method=glm,method.args=list(family=poisson), se=TRUE) 
+`ggplot(data, aes(x = varX1, y = varY, color = factor(varX2))) + geom_point() + geom_smooth(method=glm,method.args=list(family=poisson), se=TRUE)`
