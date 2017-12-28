@@ -13,19 +13,19 @@ Some graphics examples for ggplot2 using GLM.
 
 `theme_set(theme_bw())`
 
-## Base Plot
+### Base Plot
 `gg <- ggplot(data, aes(x = varX1, y = varY, color = factor(varX2))) + geom_point() + geom_smooth(method=glm, se=FALSE) + labs(subtitle="Unknow data", title="Example plot", y="Categorical Y-Var", x="Categorical X-Var1") + scale_x_continuous(limits=c(0,55))`
 
-## Modify theme components
+### Modify theme components
 `gg2 <- gg + theme(axis.title.x=element_text(size=12), axis.title.y=element_text(size=12), axis.text.x=element_text(size=10), axis.text.y=element_text(size=10))`
 
-## Modify legend
+### Modify legend
 `gg3 <- gg2 + scale_color_discrete(name="Treatment", labels = c("TA","TB","TC"))`
 
-## Plot
+### Plot
 `gg3`
 
 ![plot](https://s10.postimg.org/y56gh5crd/Rplot.png)
 
-### For poisson data
+#### For poisson data
 `ggplot(data, aes(x = varX1, y = varY, color = factor(varX2))) + geom_point() + geom_smooth(method=glm,method.args=list(family=poisson), se=TRUE)`
